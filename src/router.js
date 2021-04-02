@@ -111,6 +111,21 @@ const routes = [
     name: "Premium",
     component: () => import("@/components/plan/Premium.vue"),
   },
+  {
+    path: "/Property",
+    name: "Property",
+    component: () => import("@/components/plan/Property.vue"),
+  },
+  {
+    path: "/Cars",
+    name: "Cars",
+    component: () => import("@/components/plan/Cars.vue"),
+  },
+  {
+    path: "/Others",
+    name: "Others",
+    component: () => import("@/components/plan/Others.vue"),
+  },
 ];
 
 const router = new VueRouter({
