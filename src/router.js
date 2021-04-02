@@ -110,12 +110,16 @@ const routes = [
     path: "/plan",
     name: "plan",
     component: () => import("@/views/plan.vue"),
+    redirect: '/plan/premium',
+    children: [
+      {
+        path: "/plan/premium",
+        name: "Premium",
+        component: () => import("@/components/plan/Premium.vue"),
+      },
+    ]
   },
-  {
-    path: "/plan/Premium",
-    name: "Premium",
-    component: () => import("@/components/plan/Premium.vue"),
-  },
+
 ];
 
 const router = new VueRouter({
