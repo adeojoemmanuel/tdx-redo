@@ -28,7 +28,8 @@ const routes = [
       {
         path: "/profile/selling_info",
         name: "SellingInfo",
-        component: () => import("@/components/profile/SellingInfoComponent.vue"),
+        component: () =>
+          import("@/components/profile/SellingInfoComponent.vue"),
       },
       {
         path: "/profile/selling_info/how_to_sell",
@@ -48,12 +49,14 @@ const routes = [
           {
             path: "contact-details",
             name: "contact-details",
-            component: () => import("@/components/profile/settings/ContactDetails"),
+            component: () =>
+              import("@/components/profile/settings/ContactDetails"),
           },
           {
             path: "company-details",
             name: "company-details",
-            component: () => import("@/components/profile/settings/CompanyDetails"),
+            component: () =>
+              import("@/components/profile/settings/CompanyDetails"),
           },
 
           {
@@ -65,37 +68,43 @@ const routes = [
           {
             path: "chat",
             name: "chat-settings",
-            component: () => import("@/components/profile/settings/ChatSettings"),
+            component: () =>
+              import("@/components/profile/settings/ChatSettings"),
           },
 
           {
             path: "feedback",
             name: "feedback-settings",
-            component: () => import("@/components/profile/settings/FeedbackSettings"),
+            component: () =>
+              import("@/components/profile/settings/FeedbackSettings"),
           },
 
           {
             path: "social",
             name: "social-networks",
-            component: () => import("@/components/profile/settings/SocialNetworks"),
+            component: () =>
+              import("@/components/profile/settings/SocialNetworks"),
           },
 
           {
             path: "notification",
             name: "notification-settings",
-            component: () => import("@/components/profile/settings/NotificationSettings"),
+            component: () =>
+              import("@/components/profile/settings/NotificationSettings"),
           },
 
           {
             path: "change-password",
             name: "change-password",
-            component: () => import("@/components/profile/settings/ChangePassword"),
+            component: () =>
+              import("@/components/profile/settings/ChangePassword"),
           },
 
           {
             path: "manage-account",
             name: "manage-account",
-            component: () => import("@/components/profile/settings/ManageAccount"),
+            component: () =>
+              import("@/components/profile/settings/ManageAccount"),
           },
         ],
       },
@@ -110,16 +119,31 @@ const routes = [
     path: "/plan",
     name: "plan",
     component: () => import("@/views/plan.vue"),
-    redirect: '/plan/premium',
+    redirect: "/plan/premium",
     children: [
       {
-        path: "/plan/premium",
+        path: "/plan/Premium",
         name: "Premium",
         component: () => import("@/components/plan/Premium.vue"),
       },
-    ]
+    ],
   },
 
+  {
+    path: "/Property",
+    name: "Property",
+    component: () => import("@/components/plan/Property.vue"),
+  },
+  {
+    path: "/Cars",
+    name: "Cars",
+    component: () => import("@/components/plan/Cars.vue"),
+  },
+  {
+    path: "/Others",
+    name: "Others",
+    component: () => import("@/components/plan/Others.vue"),
+  },
 ];
 
 const router = new VueRouter({
