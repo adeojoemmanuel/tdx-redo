@@ -1,687 +1,108 @@
 <template>
-  <div>
-    <div class="Align-center">
-      <div class="property bg-white lg:block hidden">
-        <div class="pt-5">
-          <div class="text-gray-600 text-center">
-            <div class="mt-4">
-              <h1 class="text-2xl font-thin uppercase">
-                here is our premium plan for property:
-              </h1>
-            </div>
-          </div>
-          <div
-            class="py-16 justify-center flex lg:flex-row gap-4 lg:mx-auto sm:mx-2 lg:w-1/2 sm:w-full"
-          >
-            <button
-              class="w-48 h-16 px-4 bg-blue-300 rounded-md shadow-lg hover:bg-blue-500 focus:outline-none"
-              @click="showYearly = !showYearly"
-            >
-              <p class="w-18 text-white font-bold">Bill Yearly</p>
-            </button>
-            <button
-              class="w-48 h-16 px-4 bg-gray-600 rounded-md shadow-lg hover:bg-gray-300 focus:outline-none"
-              @click="showMonthly = !showMonthly"
-            >
-              <p class="w-18 text-white font-bold">Bill Monthly</p>
-            </button>
-          </div>
-          <div class="w-2/3 h-2/3 mx-auto">
-            <div class="w-full h-auto">
-              <div
-                v-bind="year"
-                class="grid grid-cols-3 justify-center gap-4 text-center yearlyplan"
-                v-if="showYearly"
-                style="hidden"
-              >
-                <div
-                  class="w-full h-auto px-4 py-8 border-2 rounded-xl shadow-lg transform hover:scale-110 motion-reduce:transform-none duration-1000"
-                >
-                  <div class="flex flex-row gap-4 justify-around">
-                    <div
-                      class="w-16 h-16 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center justify-center"
-                    >
-                      circle
-                    </div>
-                    <div class="flex flex-col block px-2 py-2 w-1/2 text-left">
-                      <span class="font-bold text-2xl text-gray-600 mb-4"
-                        >Basic Plan</span
-                      >
-                      <span class="text-base font-bold text-green-600"
-                        >Yearly</span
-                      >
-                    </div>
-                  </div>
-                  <div class="w-full py-4 px-4">
-                    <div class="flex flex-row gap-4 justify-around py-4">
-                      <div
-                        class="w-6 h-6 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center mt-2 justify-center"
-                      >
-                        x
-                      </div>
-                      <div class="px-2 py-2 w-1/2 text-left">
-                        <span class="font-bold text-base text-gray-600 mb-4">
-                          Plan</span
-                        >
-                      </div>
-                    </div>
-                    <div class="flex flex-row gap-4 justify-around py-4">
-                      <div
-                        class="w-6 h-6 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center mt-2 justify-center"
-                      >
-                        x
-                      </div>
-                      <div class="px-2 py-2 w-1/2 text-left">
-                        <span class="font-bold text-base text-gray-600 mb-4">
-                          Plan</span
-                        >
-                      </div>
-                    </div>
-                    <div class="flex flex-row gap-4 justify-around py-4">
-                      <div
-                        class="w-6 h-6 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center mt-2 justify-center"
-                      >
-                        x
-                      </div>
-                      <div class="px-2 py-2 w-1/2 text-left">
-                        <span class="font-bold text-base text-gray-600 mb-4">
-                          Plan</span
-                        >
-                      </div>
-                    </div>
-                    <div class="flex flex-row gap-4 justify-around py-4">
-                      <div
-                        class="w-6 h-6 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center mt-2 justify-center"
-                      >
-                        x
-                      </div>
-                      <div class="px-2 py-2 w-1/2 text-left">
-                        <span class="font-bold text-base text-gray-600 mb-4">
-                          Plan</span
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="w-full h-auto px-4 py-8 border-2 rounded-xl shadow-lg transform hover:scale-110 motion-reduce:transform-none duration-1000"
-                >
-                  <div class="flex flex-row gap-4 justify-around">
-                    <div
-                      class="w-16 h-16 rounded-full flex bg-yellow-300 font-bold text-white shadow-lg items-center justify-center"
-                    >
-                      circle
-                    </div>
-                    <div class="flex flex-col block px-2 py-2 w-1/2 text-left">
-                      <span class="font-bold text-2xl text-gray-600 mb-4"
-                        >Basic Plan</span
-                      >
-                      <span class="text-base font-bold text-green-600"
-                        >Yearly</span
-                      >
-                    </div>
-                  </div>
-                  <div class="w-full py-4 px-4">
-                    <div class="flex flex-row gap-4 justify-around py-4">
-                      <div
-                        class="w-6 h-6 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center mt-2 justify-center"
-                      >
-                        c
-                      </div>
-                      <div class="px-2 py-2 w-1/2 text-left">
-                        <span class="font-bold text-base text-gray-600 mb-4">
-                          Plan</span
-                        >
-                      </div>
-                    </div>
-                    <div class="flex flex-row gap-4 justify-around py-4">
-                      <div
-                        class="w-6 h-6 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center mt-2 justify-center"
-                      >
-                        c
-                      </div>
-                      <div class="px-2 py-2 w-1/2 text-left">
-                        <span class="font-bold text-base text-gray-600 mb-4">
-                          Plan</span
-                        >
-                      </div>
-                    </div>
-                    <div class="flex flex-row gap-4 justify-around py-4">
-                      <div
-                        class="w-6 h-6 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center mt-2 justify-center"
-                      >
-                        c
-                      </div>
-                      <div class="px-2 py-2 w-1/2 text-left">
-                        <span class="font-bold text-base text-gray-600 mb-4">
-                          Plan</span
-                        >
-                      </div>
-                    </div>
-                    <div class="flex flex-row gap-4 justify-around py-4">
-                      <div
-                        class="w-6 h-6 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center mt-2 justify-center"
-                      >
-                        c
-                      </div>
-                      <div class="px-2 py-2 w-1/2 text-left">
-                        <span class="font-bold text-base text-gray-600 mb-4">
-                          Plan</span
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="w-full h-auto px-4 py-8 border-2 rounded-xl shadow-lg transform hover:scale-110 motion-reduce:transform-none duration-1000"
-                >
-                  <div class="flex flex-row gap-4 justify-around">
-                    <div
-                      class="w-16 h-16 rounded-full flex bg-red-300 font-bold text-white shadow-lg items-center justify-center"
-                    >
-                      circle
-                    </div>
-                    <div class="flex flex-col block px-2 py-2 w-1/2 text-left">
-                      <span class="font-bold text-2xl text-gray-600 mb-4"
-                        >Basic Plan</span
-                      >
-                      <span class="text-base font-bold text-green-600"
-                        >Yearly</span
-                      >
-                    </div>
-                  </div>
-                  <div class="w-full py-4 px-4">
-                    <div class="flex flex-row gap-4 justify-around py-4">
-                      <div
-                        class="w-6 h-6 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center mt-2 justify-center"
-                      >
-                        I
-                      </div>
-                      <div class="px-2 py-2 w-1/2 text-left">
-                        <span class="font-bold text-base text-gray-600 mb-4">
-                          Plan</span
-                        >
-                      </div>
-                    </div>
-                    <div class="flex flex-row gap-4 justify-around py-4">
-                      <div
-                        class="w-6 h-6 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center mt-2 justify-center"
-                      >
-                        I
-                      </div>
-                      <div class="px-2 py-2 w-1/2 text-left">
-                        <span class="font-bold text-base text-gray-600 mb-4">
-                          Plan</span
-                        >
-                      </div>
-                    </div>
-                    <div class="flex flex-row gap-4 justify-around py-4">
-                      <div
-                        class="w-6 h-6 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center mt-2 justify-center"
-                      >
-                        I
-                      </div>
-                      <div class="px-2 py-2 w-1/2 text-left">
-                        <span class="font-bold text-base text-gray-600 mb-4">
-                          Plan</span
-                        >
-                      </div>
-                    </div>
-                    <div class="flex flex-row gap-4 justify-around py-4">
-                      <div
-                        class="w-6 h-6 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center mt-2 justify-center"
-                      >
-                        I
-                      </div>
-                      <div class="px-2 py-2 w-1/2 text-left">
-                        <span class="font-bold text-base text-gray-600 mb-4">
-                          Plan</span
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                v-bind="month"
-                class="grid grid-cols-3 justify-center gap-4 text-center monthlyplan"
-                v-if="showMonthly"
-                style="hidden"
-              >
-                <div
-                  class="w-full h-auto px-4 py-8 border-2 rounded-xl shadow-lg transform hover:scale-110 motion-reduce:transform-none duration-1000"
-                >
-                  <div class="flex flex-row gap-4 justify-around">
-                    <div
-                      class="w-16 h-16 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center justify-center"
-                    >
-                      circle
-                    </div>
-                    <div class="flex flex-col block px-2 py-2 w-1/2 text-left">
-                      <span class="font-bold text-2xl text-gray-600 mb-4"
-                        >Basic Plan</span
-                      >
-                      <span class="text-base font-bold text-green-600"
-                        >Monthly</span
-                      >
-                    </div>
-                  </div>
-                  <div class="w-full py-4 px-4">
-                    <div class="flex flex-row gap-4 justify-around py-4">
-                      <div
-                        class="w-6 h-6 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center mt-2 justify-center"
-                      >
-                        x
-                      </div>
-                      <div class="px-2 py-2 w-1/2 text-left">
-                        <span class="font-bold text-base text-gray-600 mb-4">
-                          Plan</span
-                        >
-                      </div>
-                    </div>
-                    <div class="flex flex-row gap-4 justify-around py-4">
-                      <div
-                        class="w-6 h-6 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center mt-2 justify-center"
-                      >
-                        x
-                      </div>
-                      <div class="px-2 py-2 w-1/2 text-left">
-                        <span class="font-bold text-base text-gray-600 mb-4">
-                          Plan</span
-                        >
-                      </div>
-                    </div>
-                    <div class="flex flex-row gap-4 justify-around py-4">
-                      <div
-                        class="w-6 h-6 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center mt-2 justify-center"
-                      >
-                        x
-                      </div>
-                      <div class="px-2 py-2 w-1/2 text-left">
-                        <span class="font-bold text-base text-gray-600 mb-4">
-                          Plan</span
-                        >
-                      </div>
-                    </div>
-                    <div class="flex flex-row gap-4 justify-around py-4">
-                      <div
-                        class="w-6 h-6 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center mt-2 justify-center"
-                      >
-                        x
-                      </div>
-                      <div class="px-2 py-2 w-1/2 text-left">
-                        <span class="font-bold text-base text-gray-600 mb-4">
-                          Plan</span
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="w-full h-auto px-4 py-8 border-2 rounded-xl shadow-lg transform hover:scale-110 motion-reduce:transform-none duration-1000"
-                >
-                  <div class="flex flex-row gap-4 justify-around">
-                    <div
-                      class="w-16 h-16 rounded-full flex bg-yellow-300 font-bold text-white shadow-lg items-center justify-center"
-                    >
-                      circle
-                    </div>
-                    <div class="flex flex-col block px-2 py-2 w-1/2 text-left">
-                      <span class="font-bold text-2xl text-gray-600 mb-4"
-                        >Basic Plan</span
-                      >
-                      <span class="text-base font-bold text-green-600"
-                        >Monthly</span
-                      >
-                    </div>
-                  </div>
-                  <div class="w-full py-4 px-4">
-                    <div class="flex flex-row gap-4 justify-around py-4">
-                      <div
-                        class="w-6 h-6 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center mt-2 justify-center"
-                      >
-                        c
-                      </div>
-                      <div class="px-2 py-2 w-1/2 text-left">
-                        <span class="font-bold text-base text-gray-600 mb-4">
-                          Plan</span
-                        >
-                      </div>
-                    </div>
-                    <div class="flex flex-row gap-4 justify-around py-4">
-                      <div
-                        class="w-6 h-6 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center mt-2 justify-center"
-                      >
-                        c
-                      </div>
-                      <div class="px-2 py-2 w-1/2 text-left">
-                        <span class="font-bold text-base text-gray-600 mb-4">
-                          Plan</span
-                        >
-                      </div>
-                    </div>
-                    <div class="flex flex-row gap-4 justify-around py-4">
-                      <div
-                        class="w-6 h-6 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center mt-2 justify-center"
-                      >
-                        c
-                      </div>
-                      <div class="px-2 py-2 w-1/2 text-left">
-                        <span class="font-bold text-base text-gray-600 mb-4">
-                          Plan</span
-                        >
-                      </div>
-                    </div>
-                    <div class="flex flex-row gap-4 justify-around py-4">
-                      <div
-                        class="w-6 h-6 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center mt-2 justify-center"
-                      >
-                        c
-                      </div>
-                      <div class="px-2 py-2 w-1/2 text-left">
-                        <span class="font-bold text-base text-gray-600 mb-4">
-                          Plan</span
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="w-full h-auto px-4 py-8 border-2 rounded-xl shadow-lg transform hover:scale-110 motion-reduce:transform-none duration-1000"
-                >
-                  <div class="flex flex-row gap-4 justify-around">
-                    <div
-                      class="w-16 h-16 rounded-full flex bg-red-300 font-bold text-white shadow-lg items-center justify-center"
-                    >
-                      circle
-                    </div>
-                    <div class="flex flex-col block px-2 py-2 w-1/2 text-left">
-                      <span class="font-bold text-2xl text-gray-600 mb-4"
-                        >Basic Plan</span
-                      >
-                      <span class="text-base font-bold text-green-600"
-                        >Monthly</span
-                      >
-                    </div>
-                  </div>
-                  <div class="w-full py-4 px-4">
-                    <div class="flex flex-row gap-4 justify-around py-4">
-                      <div
-                        class="w-6 h-6 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center mt-2 justify-center"
-                      >
-                        I
-                      </div>
-                      <div class="px-2 py-2 w-1/2 text-left">
-                        <span class="font-bold text-base text-gray-600 mb-4">
-                          Plan</span
-                        >
-                      </div>
-                    </div>
-                    <div class="flex flex-row gap-4 justify-around py-4">
-                      <div
-                        class="w-6 h-6 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center mt-2 justify-center"
-                      >
-                        I
-                      </div>
-                      <div class="px-2 py-2 w-1/2 text-left">
-                        <span class="font-bold text-base text-gray-600 mb-4">
-                          Plan</span
-                        >
-                      </div>
-                    </div>
-                    <div class="flex flex-row gap-4 justify-around py-4">
-                      <div
-                        class="w-6 h-6 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center mt-2 justify-center"
-                      >
-                        I
-                      </div>
-                      <div class="px-2 py-2 w-1/2 text-left">
-                        <span class="font-bold text-base text-gray-600 mb-4">
-                          Plan</span
-                        >
-                      </div>
-                    </div>
-                    <div class="flex flex-row gap-4 justify-around py-4">
-                      <div
-                        class="w-6 h-6 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center mt-2 justify-center"
-                      >
-                        I
-                      </div>
-                      <div class="px-2 py-2 w-1/2 text-left">
-                        <span class="font-bold text-base text-gray-600 mb-4">
-                          Plan</span
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+  <div class="py-24">
+    <div class="mx-auto text-center w-10/12">
+      <h2 class="text-gray-800 font-semibold text-3xl tracking-wide">
+        Pricing plans
+      </h2>
+      <div class="w-11/12 sm:w-10/12 md:w-6/12 mx-auto">
+        <p class="pt-2 text-gray-400 tracking-tight">
+          Place your ads above others with our paid plans, with just little
+          money you can place your ads to more customers on our platform
+        </p>
       </div>
-      <div class="property bg-white lg:hidden block">
-        <div class="pt-20">
-          <h1
-            class="pt-2 capitalize text-center font-normal text-xl w-2/3 mx-auto pb-8"
-          >
-            here is our premium plan for property:
-          </h1>
+    </div>
+    <!-- pricing cards -->
+    <div class="mt-8">
+      <div class="flex items-center space-x-6 justify-center py-3">
+        <span class="text-sm text-gray-700 font-medium">Bill Monthly</span>
+        <label
+          for="unchecked"
+          class="mt-1 inline-flex items-center cursor-pointer"
+        >
+          <span class="relative">
+            <span
+              class="block w-12 h-6 rounded-full shadow-inner"
+              :class="planType ? 'bg-explorerGreen-300' : 'bg-gray-200'"
+            ></span>
+            <span
+              class="absolute block w-4 bg-white h-4 mt-1 ml-3 rounded-full shadow inset-y-0 left-0 focus-within:shadow-outline transition-transform duration-300 ease-in-out"
+              :class="planType ? 'transform translate-x-full' : 'ml-0.5'"
+            >
+              <input
+                id="unchecked"
+                type="checkbox"
+                v-model="planType"
+                class="absolute opacity-0 w-0 h-0"
+              />
+            </span>
+          </span>
+        </label>
+        <span class="text-sm text-gray-700 font-medium">Bill Yearly</span>
+      </div>
+    </div>
+    <!-- pricing cards -->
+    <div
+      class="flex items-center justify-center w-11/12 lg:10/12 overflow-x-scroll mx-auto space-x-12 mt-12 py-12 px-8"
+    >
+      <div
+        class="rounded-md bg-white px-8 py-6 max-w-xs flex-shrink-0 lg:w-1/3 h-auto shadow-md transition duration-500 transform hover:bg-gray-50 hover:scale-110"
+        v-for="plan in plans"
+        :key="plan.id"
+      >
+        <div class="text-left">
+          <p class="text-3xl flex items-center text-gray-800 font-medium">
+            ${{ plan.price
+            }}<span
+              class="text-xs ml-0.5 tracking-tight font-medium text-gray-500 mt-1.5"
+              >/{{ plan.type }}</span
+            >
+          </p>
         </div>
-        <div class="flex flex-col items-center w-2/3 mx-auto py-5 space-y-4">
-          <button
-            class="w-48 h-16 px-4 bg-blue-300 rounded-md shadow-lg hover:bg-blue-500 focus:outline-none"
-          >
-            <p class="w-18 text-white font-bold">Bill Yearly</p>
-          </button>
-          <button
-            class="w-48 h-16 px-4 bg-gray-600 rounded-md shadow-lg hover:bg-gray-300 focus:outline-none"
-          >
-            &nbsp;
-            <p class="w-18 text-white font-bold">Bill Monthly</p>
-          </button>
+        <p class="text-gray-800 text-2xl font-medium pt-4">{{ plan.name }}</p>
+        <p class="text-gray-400 pt-3 text-xs w-11/12 break-words">
+          {{ plan.desc }}
+        </p>
+        <hr class="border-gray-100 py-0.5 my-10" />
+        <div class="mt-6 mx-auto">
+          <ul class="space-y-5">
+            <li
+              class="flex items-center space-x-2"
+              v-for="feature in plan.features"
+              :key="feature.id"
+            >
+              <div class="rounded-full bg-green-200 p-0.5">
+                <svg
+                  class="text-green-400 stroke-current opacity-80 h-4 w-4 mx-auto text-center"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="3"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              </div>
+              <span class="text-sm text-gray-600 font-medium">
+                {{ feature.name }}</span
+              >
+            </li>
+          </ul>
         </div>
-        <div class="flex flex-col w-full px-8 pt-10 space-y-4">
-          <div class="w-full h-auto px-4 py-8 border-2 rounded-xl shadow-lg">
-            <div class="flex flex-row gap-4 justify-around">
-              <div
-                class="w-16 h-16 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center justify-center"
-              >
-                circle
-              </div>
-              <div class="flex flex-col block px-2 py-2 w-1/2 text-left">
-                <span class="font-bold text-2xl text-gray-600 mb-4"
-                  >Basic Plan</span
-                >
-                <span class="text-base font-bold text-green-600">Free</span>
-              </div>
-            </div>
-            <div class="w-full py-4 px-4">
-              <div class="flex flex-row gap-4 justify-around py-4">
-                <div
-                  class="w-6 h-6 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center mt-2 justify-center"
-                >
-                  x
-                </div>
-                <div class="px-2 py-2 w-1/2 text-left">
-                  <span class="font-bold text-base text-gray-600 mb-4"
-                    >Basic Plan</span
-                  >
-                </div>
-              </div>
-              <div class="flex flex-row gap-4 justify-around py-4">
-                <div
-                  class="w-6 h-6 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center mt-2 justify-center"
-                >
-                  x
-                </div>
-                <div class="px-2 py-2 w-1/2 text-left">
-                  <span class="font-bold text-base text-gray-600 mb-4"
-                    >Basic Plan</span
-                  >
-                </div>
-              </div>
-              <div class="flex flex-row gap-4 justify-around py-4">
-                <div
-                  class="w-6 h-6 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center mt-2 justify-center"
-                >
-                  x
-                </div>
-                <div class="px-2 py-2 w-1/2 text-left">
-                  <span class="font-bold text-base text-gray-600 mb-4"
-                    >Basic Plan</span
-                  >
-                </div>
-              </div>
-              <div class="flex flex-row gap-4 justify-around py-4">
-                <div
-                  class="w-6 h-6 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center mt-2 justify-center"
-                >
-                  x
-                </div>
-                <div class="px-2 py-2 w-1/2 text-left">
-                  <span class="font-bold text-base text-gray-600 mb-4"
-                    >Basic Plan</span
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full h-auto px-4 py-8 border-2 rounded-xl shadow-lg">
-            <div class="flex flex-row gap-4 justify-around">
-              <div
-                class="w-16 h-16 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center justify-center"
-              >
-                circle
-              </div>
-              <div class="flex flex-col block px-2 py-2 w-1/2 text-left">
-                <span class="font-bold text-2xl text-gray-600 mb-4"
-                  >Basic Plan</span
-                >
-                <span class="text-base font-bold text-green-600">Free</span>
-              </div>
-            </div>
-            <div class="w-full py-4 px-4">
-              <div class="flex flex-row gap-4 justify-around py-4">
-                <div
-                  class="w-6 h-6 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center mt-2 justify-center"
-                >
-                  x
-                </div>
-                <div class="px-2 py-2 w-1/2 text-left">
-                  <span class="font-bold text-base text-gray-600 mb-4"
-                    >Basic Plan</span
-                  >
-                </div>
-              </div>
-              <div class="flex flex-row gap-4 justify-around py-4">
-                <div
-                  class="w-6 h-6 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center mt-2 justify-center"
-                >
-                  x
-                </div>
-                <div class="px-2 py-2 w-1/2 text-left">
-                  <span class="font-bold text-base text-gray-600 mb-4"
-                    >Basic Plan</span
-                  >
-                </div>
-              </div>
-              <div class="flex flex-row gap-4 justify-around py-4">
-                <div
-                  class="w-6 h-6 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center mt-2 justify-center"
-                >
-                  x
-                </div>
-                <div class="px-2 py-2 w-1/2 text-left">
-                  <span class="font-bold text-base text-gray-600 mb-4"
-                    >Basic Plan</span
-                  >
-                </div>
-              </div>
-              <div class="flex flex-row gap-4 justify-around py-4">
-                <div
-                  class="w-6 h-6 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center mt-2 justify-center"
-                >
-                  x
-                </div>
-                <div class="px-2 py-2 w-1/2 text-left">
-                  <span class="font-bold text-base text-gray-600 mb-4"
-                    >Basic Plan</span
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full h-auto px-4 py-8 border-2 rounded-xl shadow-lg">
-            <div class="flex flex-row gap-4 justify-around">
-              <div
-                class="w-16 h-16 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center justify-center"
-              >
-                circle
-              </div>
-              <div class="flex flex-col block px-2 py-2 w-1/2 text-left">
-                <span class="font-bold text-2xl text-gray-600 mb-4"
-                  >Basic Plan</span
-                >
-                <span class="text-base font-bold text-green-600">Free</span>
-              </div>
-            </div>
-            <div class="w-full py-4 px-4">
-              <div class="flex flex-row gap-4 justify-around py-4">
-                <div
-                  class="w-6 h-6 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center mt-2 justify-center"
-                >
-                  x
-                </div>
-                <div class="px-2 py-2 w-1/2 text-left">
-                  <span class="font-bold text-base text-gray-600 mb-4"
-                    >Basic Plan</span
-                  >
-                </div>
-              </div>
-              <div class="flex flex-row gap-4 justify-around py-4">
-                <div
-                  class="w-6 h-6 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center mt-2 justify-center"
-                >
-                  x
-                </div>
-                <div class="px-2 py-2 w-1/2 text-left">
-                  <span class="font-bold text-base text-gray-600 mb-4"
-                    >Basic Plan</span
-                  >
-                </div>
-              </div>
-              <div class="flex flex-row gap-4 justify-around py-4">
-                <div
-                  class="w-6 h-6 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center mt-2 justify-center"
-                >
-                  x
-                </div>
-                <div class="px-2 py-2 w-1/2 text-left">
-                  <span class="font-bold text-base text-gray-600 mb-4"
-                    >Basic Plan</span
-                  >
-                </div>
-              </div>
-              <div class="flex flex-row gap-4 justify-around py-4">
-                <div
-                  class="w-6 h-6 rounded-full flex bg-green-300 font-bold text-white shadow-lg items-center mt-2 justify-center"
-                >
-                  x
-                </div>
-                <div class="px-2 py-2 w-1/2 text-left">
-                  <span class="font-bold text-base text-gray-600 mb-4"
-                    >Basic Plan</span
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="w-10/12 pt-10">
+          <button
+            class="bg-transparent text-gray-800 border border-explorerGreen-200 hover:border-transparent hover:bg-explorerGreen-300 hover:text-white tracking-wide text-center w-full py-3 rounded-full transition duration-300"
+          >
+            Get Started
+          </button>
         </div>
       </div>
     </div>
-
-    <router-view></router-view>
+    <!-- pricing cards -->
+    <!-- pricing area -->
   </div>
 </template>
 
@@ -692,21 +113,72 @@ export default {
     return {
       showYearly: true,
       showMonthly: true,
+      planType: false,
+      plans: [
+        {
+          id: 1,
+          name: "Basic Plan",
+          desc:
+            "Our basic plan gives you tools to enable new and low income businesses grow on our platform and increase customer base",
+          type: "Monthly",
+          price: 20,
+          yrPrice: 200,
+          features: [
+            { id: 1, name: "2 top ads monthly" },
+            { id: 2, name: "3 premium ads monthly" },
+          ],
+        },
+        {
+          id: 2,
+          name: "Business Plan",
+          type: "Monthly",
+          desc:
+            "Our business is the most popular plan, it gives you features to grow your business rapidly and grow your customer base",
+          price: 30,
+          yrPrice: 300,
+          features: [
+            { id: 1, name: "5 top ads monthly" },
+            { id: 2, name: "10 premium ads monthly" },
+          ],
+        },
+        {
+          id: 3,
+          name: "Premium Plan",
+          type: "Monthly",
+          desc:
+            "Our premium plan gives you all features to grow your business as fast as possible within a short time and its also useful for large businesses",
+          price: 60,
+          yrPrice: 600,
+          features: [
+            { id: 1, name: "20 top ads monthly" },
+            { id: 2, name: "Unlimited premium ads monthly" },
+          ],
+        },
+      ],
     };
   },
-  /*methods() {
-   switchPlan(){
-      if (this.showYearly.display=="none"){
-        this.showYearly.display="none";
-        this.showMonthly.display="block";
+  methods: {
+    changeType(currentType) {
+      this.plans.forEach((plan) => {
+        if (currentType == 1) {
+          (plan.type = "Yearly"), (plan.price = plan.yrPrice);
+        } else if (currentType === 2) {
+          plan.type = "Monthly";
+          plan.price = plan.yrPrice / 10;
+        }
+      });
+    },
+  },
+  watch: {
+    planType: {
+      immediate: true,
+      handler: function(plan) {
+        plan ? this.changeType(1) : this.changeType(2)
       }
-    };
-  }, */
+    }
+  }
 };
 </script>
 
 <style lang="css" scoped>
-.property {
-  height: 800px;
-}
 </style>
