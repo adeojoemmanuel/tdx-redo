@@ -82,11 +82,12 @@
             >
               Sell
             </button>
-            <button
-              class="w-1/2 border-2 border-explorerGreen-300 rounded text-explorerGreen-300 px-4 py-3 text-xs focus:outline-none"
+            <router-link
+              :to="{ name: 'Howtosell' }"
+              class="w-1/2 border-2 border-explorerGreen-300 rounded text-center text-explorerGreen-300 px-4 py-3 text-xs focus:outline-none"
             >
               How to sell on tradex
-            </button>
+            </router-link>
           </div>
         </div>
       </div>
@@ -123,11 +124,12 @@
             >
               Post an advert
             </button>
-            <button
-              class="w-1/2 border-2 border-explorerGreen-300 rounded text-explorerGreen-300 px-4 py-3 text-xs focus:outline-none"
+            <router-link
+              :to="{ name: 'Howtosell' }"
+              class="w-1/2 border-2 border-explorerGreen-300 text-center rounded text-explorerGreen-300 px-4 py-3 text-xs focus:outline-none"
             >
               How to sell on tradex
-            </button>
+            </router-link>
           </div>
         </div>
       </div>

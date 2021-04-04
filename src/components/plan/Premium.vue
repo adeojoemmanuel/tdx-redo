@@ -1,8 +1,8 @@
 <template>
   <div
-    class="w-full h-full landing bg-gradient-to-b from-explorerGreen-300 to-explorerGreen-500"
+    class="w-full landing bg-gradient-to-b from-explorerGreen-300 to-explorerGreen-500"
   >
-    <div>
+    <div class="pt-20">
       <div class="bg-white w-1/2 sm:w-full mx-auto justify-center premium-box">
         <div class="premium-box-title text-center">
           <span>
@@ -114,57 +114,4 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.landing {
-  height: 90vh;
-}
-.premium-box {
-  width: 30%;
-  height: 200px;
-  justify-content: center;
-  align-items: center;
-
-  padding: 30px 0;
-  background-color: rgb(255, 255, 255);
-  border-radius: 6px;
-}
-.premium-box-title {
-  width: auto;
-  border-bottom: 1px solid #cacab7;
-  margin: 20px 0px;
-  display: flex;
-  justify-content: center;
-}
-.title-text {
-  font-weight: 500;
-  font-size: 25px;
-  color: #4f4f4f;
-}
-.premium-box-aside {
-  font-weight: 200;
-  font-size: 15px;
-  height: 50px;
-  color: #4f4f4f;
-}
-.inner-text {
-  width: auto;
-  height: auto;
-  font-size: 12px;
-  margin: 0px 30px;
-}
-@media screen and (max-width: 900px) {
-  .premium-box {
-    width: 330px;
-    height: 30%;
-    justify-content: center;
-    align-items: center;
-
-    background-color: rgb(255, 255, 255);
-    border-radius: 6px;
-  }
-}
-@media screen and (max-width: 600px) {
-  .inner-text h5 {
-    font-size: 12px;
-  }
-}
 </style>
