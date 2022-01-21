@@ -1,11 +1,11 @@
 <template>
   <div class="w-full">
-    <p class="ml-4 lg:ml-0 mt-8 lg:mt-2 text-lg text-gray-700 tracking-wide">
+    <p class="mt-8 ml-4 text-lg tracking-wide text-gray-700 lg:ml-0 lg:mt-2">
       Trending Ads.
     </p>
-    <div class="mt-6 grid lg:grid-cols-4 grid-cols-2 w-11/12 ">
+    <div class="grid w-11/12 grid-cols-2 mt-6 lg:grid-cols-4 ">
       <div
-        class="bg-white shadow-md rounded-md relative my-6 w-auto mx-2"
+        class="relative w-auto mx-2 my-6 bg-white rounded-md shadow-md"
         v-for="(ad, index) in ads"
         :key="index"
       >
@@ -16,15 +16,15 @@
             class="w-inherit h-inherit"
           />
           <span
-            class="bg-black opacity-60 rounded-full px-3 py-1 text-white absolute bottom-0 left-0"
+            class="absolute bottom-0 left-0 px-3 py-1 text-white bg-black rounded-full opacity-60"
             >8</span
           >
         </div>
         <div
-          class="bg-white shadow-md rounded-full px-1 py-1 h-8 w-8 absolute inset-y-0 right-0 cursor-pointer hover:shadow-lg"
+          class="absolute inset-y-0 right-0 w-8 h-8 px-1 py-1 bg-white rounded-full shadow-md cursor-pointer hover:shadow-lg"
         >
           <svg
-            class="h-6 w-6 mx-auto stroke-current text-explorerGreen-200"
+            class="w-6 h-6 mx-auto stroke-current text-explorerGreen-200"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -39,8 +39,8 @@
           </svg>
         </div>
         <div class="px-4 py-3">
-          <p class="text-lg text-gray-700 tracking-wide">{{ ad.name }}</p>
-          <p class="text-lg text-explorerGreen-200">&#8358; {{ ad.price }}</p>
+          <router-link class="text-lg tracking-wide text-gray-700">{{ ad.name }}</router-link>
+          <router-link to="/product" class="text-lg text-explorerGreen-200">&#8358; {{ ad.price }}</router-link>
         </div>
       </div>
     </div>
