@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-4 w-11/12">
+  <div class="grid w-11/12 grid-cols-4">
     <div class="col-span-3 m-2">
       <agile class="main">
         <div
@@ -12,16 +12,16 @@
         </div>
       </agile>
     </div>
-    <div class="col-span-1 m-2 p-2 bg-yellow-500 text-center text-white">
-      <span class="block font-bold text-xl leading-none"
+    <div class="col-span-1 p-2 m-2 text-center text-white bg-yellow-500">
+      <span class="block text-xl font-bold leading-none"
         >Got something to sell?</span
       >
-      <button
-        class="mx-auto b-post-advert-banner__button w-1/2 bg-white shadow-md focus:outline-none rounded-full relative my-2"
+      <router-link to="/profile"
+        class="relative w-1/2 mx-auto my-2 bg-white rounded-full shadow-md b-post-advert-banner__button focus:outline-none"
       >
         <div class="b-post-advert-banner__button_inner"></div>
-      </button>
-      <span class="block font-bold text-lg">Post and advert for free!</span>
+      </router-link>
+      <span class="block text-lg font-bold">Post and advert for free!</span>
     </div>
   </div>
 </template>

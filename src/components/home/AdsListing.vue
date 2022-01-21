@@ -39,8 +39,8 @@
           </svg>
         </div>
         <div class="px-4 py-3">
-          <router-link class="text-lg tracking-wide text-gray-700">{{ ad.name }}</router-link>
-          <router-link to="/product" class="text-lg text-explorerGreen-200">&#8358; {{ ad.price }}</router-link>
+          <router-link  to="/product" class="text-lg tracking-wide text-gray-700">{{ ad.name }}</router-link>
+          <p class="text-lg text-explorerGreen-200">&#8358; {{ ad.price }}</p>
         </div>
       </div>
     </div>

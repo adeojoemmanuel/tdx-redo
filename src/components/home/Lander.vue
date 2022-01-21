@@ -1,20 +1,20 @@
 <template>
   <div>
     <div
-      class="bg-gradient-to-b from-explorerGreen-300 to-explorerGreen-500 mx-auto h-auto py-28 lg:py-24"
+      class="h-auto mx-auto  bg-gradient-to-b from-explorerGreen-300 to-explorerGreen-500 py-28 lg:py-24"
     >
-      <div class="text-center mx-auto w-full flex justify-center">
+      <div class="flex justify-center w-full mx-auto text-center">
         <div
-          class="mx-auto text-center flex items-center justify-start space-x-2"
+          class="flex items-center justify-start mx-auto space-x-2 text-center"
         >
-          <p class="text-gray-100 font-light tracking-white">
+          <p class="font-light text-gray-100 tracking-white">
             Find anything in
           </p>
           <span
-            class="flex items-center py-1 px-2 bg-gray-800 opacity-60 text-white tracking-tight text-xs rounded-md font-semibold"
+            class="flex items-center px-2 py-1 text-xs font-semibold tracking-tight text-white bg-gray-800 rounded-md  opacity-60"
           >
             <svg
-              class="h-4 w-4 stroke-current text-white"
+              class="w-4 h-4 text-white stroke-current"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -37,20 +37,21 @@
           >
         </div>
       </div>
-      <div class="text-center mx-auto flex justify-center mt-8 w-11/12">
-        <div class="w-11/12 md:w-6/12 relative text-gray-600 flex items-center">
+      <div class="flex justify-center w-11/12 mx-auto mt-8 text-center">
+        <div class="relative flex items-center w-11/12 text-gray-600 md:w-6/12">
           <input
             type="search"
             name="serch"
             placeholder="Type your search here"
-            class="bg-white rounded w-full h-14 px-5 py-3 pr-10 text-sm focus:outline-none ring-transparent focus:ring-transparent border-transparent border-0 placeholder-gray-400"
+            class="w-full px-5 py-3 pr-10 text-sm placeholder-gray-400 bg-white border-0 border-transparent rounded  h-14 focus:outline-none ring-transparent focus:ring-transparent"
           />
           <button
             type="submit"
-            class="absolute right-0 top-0 h-14 w-16 bg-yellow-500 border-transparent focus:ring-0 focus:outline-none text-center rounded-r"
+            @click.prevent="goSearch"
+            class="absolute top-0 right-0 w-16 text-center bg-yellow-500 border-transparent rounded-r  h-14 focus:ring-0 focus:outline-none"
           >
             <svg
-              class="h-4 w-4 text-white mx-auto fill-current"
+              class="w-4 h-4 mx-auto text-white fill-current"
               xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink"
               version="1.1"
@@ -75,7 +76,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    goSearch() {
+      this.$router.push("/search");
+    },
+  },
+};
 </script>
 
 <style scoped>
